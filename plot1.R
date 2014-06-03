@@ -3,7 +3,7 @@
 ## Programming Assignment 1 - Plot 1
 
 ## data file name:
-filename <- household_power_consumption.txt
+filename <- "household_power_consumption.txt"
 
 ## read in data file. Note: separator is semi-colon
 data <- read.csv(filename, header = TRUE, sep = ";", na.strings="?")
@@ -17,6 +17,10 @@ filter <- c("2007-02-01", "2007-02-02")
 ## subset by requested date range:
 feb_data <- data[((data[,1]==filter[1]) | (data[,1]==filter[2])),]
 
-## close but not quite
-##hist(data[,3], col = "red", xlab="Global Active Power (kilowatts)")
+## to generate plot
+hist(feb_data[,3], col = "red", xlab="Global Active Power (kilowatts)", main="Global Active Power")
 
+## to generate png file of plot:
+png(filename = "plot1.png", width=480, height=480)
+hist(feb_data[,3], col = "red", xlab="Global Active Power (kilowatts)", main="Global Active Power")
+dev.off()
