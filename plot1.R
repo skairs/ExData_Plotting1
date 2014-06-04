@@ -17,8 +17,8 @@ filter <- c("2007-02-01", "2007-02-02")
 ## subset by requested date range:
 feb_data <- data[((data[,1]==filter[1]) | (data[,1]==filter[2])),]
 
-## to generate plot
-hist(feb_data[,3], col = "red", xlab="Global Active Power (kilowatts)", main="Global Active Power")
+## to generate plot - testing in on screen device
+## hist(feb_data[,3], col = "red", xlab="Global Active Power (kilowatts)", main="Global Active Power")
 
 ## to generate png file of plot:
 png(filename = "plot1.png", width=480, height=480)

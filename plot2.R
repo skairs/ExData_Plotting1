@@ -21,8 +21,8 @@ feb_data <- data[((data[,1]==filter[1]) | (data[,1]==filter[2])),]
 datetime <- paste(as.character(feb_data[,1]), feb_data[,2], sep = " ")
 datetime <- strptime(datetime, "%Y-%m-%d %H:%M:%S")
 
-## to generate plot
-plot(datetime, feb_data$Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="")
+## to generate plot - testing in on screen device
+## plot(datetime, feb_data$Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="")
 
 ## to generate png file of plot:
 png(filename = "plot2.png", width=480, height=480)
